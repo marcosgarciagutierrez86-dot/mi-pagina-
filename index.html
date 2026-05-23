@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Cheto el Abarrotero</title>
+    <!-- Corregido: Se cerró la etiqueta link -->
+    <link rel="stylesheet" href="Mis Estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body style="background-color: #27f5354f;">
+    
+    <header>  
+        <div class="contenedor-boton"> 
+            <button class="boton-menu-superior" onclick="toggleMenu()">
+                <div class="icono-hamburguesa">
+                    <span class="linea"></span>
+                    <span class="linea"></span>
+                    <span class="linea"></span>
+                </div>
+                <span class="texto-boton">Menú</span>
+            </button>
+        </div>
+
+        <nav id="menu-desplegable" class="menu-vertical-oculto">
+            <ul>
+                <li><a href="limpieza.html">limpieza</a></li>
+                <li><a href="bebidas.html">Bebidas</a></li>
+                <li><a href="plastifiestas.html">Plastifiestas</a></li>
+                <li><a href="lácteos.html">lácteos</a></li> 
+                <li><a href="semillas.html">Semillas</a></li>
+                <li><a href="botanas.html">Botanas</a></li>
+                <li><a href="conocenos.html">Conócenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido-principal">
+        <section>
+            <h1 class="mensaje">BIENVENIDO A NUESTRA TIENDA EN LÍNEA</h1>
+            <p class="envio-gratis">"ENVÍO GRATIS EN TU PRIMERA COMPRA"</p>
+        </section>
+        
+        <div class="contenedor-logo">
+            <img src="abarrotero.png" alt="Don Cheto el Abarrotero" class="imagen-logo">
+        </div>
+    </main>
+
+    <div class="ubicacion">
+        <h2 class="mensaje-ubicacion">ENCUÉNTRANOS EN LA CABECERA MUNICIPAL SAN JUAN CANCUC, CHIAPAS</h2>
+        <p class="contacto">En la calle Río Chakte y contáctanos al número: <strong>9672312240</strong></p>
+    </div>
+      
+    <script>
+        function toggleMenu(){
+            var menu = document.getElementById("menu-desplegable");
+            menu.classList.toggle("menu-activo");
+        }
+    </script>
+
+</body>
+</html>
