@@ -1,0 +1,292 @@
+body {
+    background-color: #b4c89a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.mensaje{
+    font-size: 40px;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 20px;
+    color: #1A237E;
+    font-family: 'arial black', sans-serif;
+}
+
+.envio-gratis{
+    animation: deslizar 2s ease-in-out infinite alternate;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #003366;
+}
+
+@keyframes deslizar{
+    from{
+        transform: translateX(-30px);
+    }
+    to{
+        transform: translateX(30px);
+    }
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav li {
+    background-color: #b4c89a;
+    color: #1A237E;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bienvenida h1 {
+    color: #1A237E;
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+.bienvenida p {
+    color: #1A237E;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ubicacion{
+    color: #1A237E;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.imagen-logo {
+    max-width: 50%;
+    height: 50%;
+    margin-top: 20px;
+}
+
+header {
+    background-color: #C1D8A4;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav li:hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+.contenedor-boton{
+    height: 60px;
+}
+
+.boton-menu-superior {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #b4c89a;
+    border: 1px solid #333;
+    padding: 8px;
+    z-index: 1001;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.menu-vertical-oculto {
+    display: none;
+    position: fixed;
+    top: 85px; 
+    left: 15px;
+    background-color: #b4c89a;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    width: 240px;
+}
+
+.menu-vertical-oculto ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-vertical-oculto li a {
+    display: block;
+    background-color: #6be39f;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 5px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    border: 1.5px solid #000;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+/* Efecto hover para los enlaces del menú vertical */
+.menu-vertical-oculto li a:hover {
+    background-color: #52c583;
+}
+
+.menu-activo {
+    display: block !important;
+}
+
+.linea {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+    display: block;
+}
+
+/* =======================================================
+   NUEVO EFECTO PARA LAS TARJETAS DE PRODUCTOS (HOVER)
+========================================================== */
+.tarjeta {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Cuando el usuario pasa el mouse por encima de la tarjeta */
+.tarjeta:hover {
+    transform: translateY(-8px) scale(1.02); /* Se eleva un poco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aparece una sombra suave */
+    background-color: #d6e5cc; /* Cambia a un verde un poco más claro */
+}
+
+
+/* =======================================================
+   RESPONSIVE DESIGN (CORREGIDO Y SIN ERRORES DE LLAVES)
+========================================================== */
+
+@media (max-width: 768px) {
+    .bienvenida h1 {
+        font-size: 24px !important;
+        text-align: center;
+    }
+
+    .imagen-logo {
+        width: 90%;
+        height: auto;
+        max-width: 400px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    #menu-desplegable {
+        width: 250px;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        background-color: #27f5354f;
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+        box-shadow: 5px 0px 15px rgba(0,0,0,0.2);
+        border-radius: 0 15px 15px 0;
+        padding: 10px;
+    }
+
+    #menu-desplegable ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    #menu-desplegable li {
+        margin-bottom: 10px;
+    }
+
+    #menu-desplegable li a {
+        display: block;
+        padding: 12px;
+        background-color: #a0ce8c;
+        color: #333;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 8px;
+        font-weight: bold;
+        border: 1px solid #97cf8f;
+    }
+
+    .contenedor-productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .contedi-pricipal {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.icono-inicio i {
+    font-size: 25px;   
+    color: #00bfff;    
+    transition: 0.3s;
+}
+
+.icono-inicio i:hover {
+    color: white;    
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .icono-inicio i {
+        font-size: 28px; 
+    }
+}
+
+/* Laptops estándar y desktops */
+@media (min-width: 1024px) {
+    .bienvenida h1 {
+        font-size: 28px !important;
+    }
+    .contenedor-productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Laptops grandes y proyectores */
+@media (min-width: 1440px) {
+    .bienvenida h1 {
+        font-size: 32px !important;
+    }
+    .contenedor-productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}

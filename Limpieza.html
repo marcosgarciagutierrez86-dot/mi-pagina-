@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpieza</title>
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .contenedor-productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .tarjeta {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #c9d8be;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .tarjeta img {
+            width: 50%;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+        .contenido {
+            text-align: center;
+            padding: 10px;
+        }
+        .contenido h3 {
+            min-height: 40px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .contenido p {
+            font-size: 14px;
+            color: #555;
+            min-height: 60px;
+        }
+        .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .boton-carrito {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .boton-carrito:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body style="background-color: #27f5354f; margin: 0; padding: 20px; font-family: Arial, sans-serif;">
+    
+    <!-- Barra de Navegación -->
+    <nav style="padding: 20px; background-color: rgba(255,255,255,0.5); margin-bottom: 20px; display: flex; align-items: center; border-radius: 8px;">
+        <a href="Mi Pagina.html" title="Ir al Inicio" style="text-decoration: none;">
+            <i class="fas fa-home" style="font-size: 25px; color: black;"></i>
+        </a>
+    </nav>
+
+    <!-- Contenedor con los 16 Productos de Limpieza -->
+    <div class="contenedor-productos">
+        
+        <!-- 1. Detergente Foca -->
+        <div class="tarjeta">
+            <img src="foca.jpg" alt="detergente foca">
+            <div class="contenido">
+                <h3>Detergente Foca</h3>
+                <p>Llevate nuestro detergente Foca, ideal para limpiar cualquier superficie con eficacia y frescura.</p>
+                <span class="precio">$48.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Foca', 48.00, 'foca.jpg', 'Llevate nuestro detergente Foca, ideal para limpiar cualquier superficie con eficacia y frescura.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 2. Detergente Roma -->
+        <div class="tarjeta">
+            <img src="roma.jpg" alt="detergente roma">
+            <div class="contenido">
+                <h3>Detergente Roma</h3>
+                <p>Prueba nuestro detergente Roma con una aroma unica.</p>
+                <span class="precio">$45.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Roma', 45.00, 'roma.jpg', 'Prueba nuestro detergente Roma con una aroma unica.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 3. Detergente Ace -->
+        <div class="tarjeta">
+            <img src="ace.png" alt="detergente ace">
+            <div class="contenido">
+                <h3>Detergente Ace</h3>
+                <p>Remueve las manchas dificiles por que Ace lo Ace.</p>
+                <span class="precio">$80.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Ace', 80.00, 'ace.png', 'Remueve las manchas dificiles por que Ace lo Ace.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 4. Detergente Blanca Nieves -->
+        <div class="tarjeta">
+            <img src="blanca nieves.png" alt="detergente blanca nieves">
+            <div class="contenido">
+                <h3>Detergente Blanca Nieves</h3>
+                <p>Blanca Nieves es el producto ideal para limpiar superficies.</p>
+                <span class="precio">$45.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Blanca Nieves', 45.00, 'blanca nieves.png', 'Blanca Nieves es el producto ideal para limpiar superficies.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 5. Detergente Persil Líquido -->
+        <div class="tarjeta">
+            <img src="persil liquido.png" alt="detergente persil liquido">
+            <div class="contenido">
+                <h3>Detergente Persil Líquido De 800 ml</h3>
+                <p>Alta tecnología alemana líquida que remueve manchas difíciles cuidando las fibras de tus prendas.</p>
+                <span class="precio">$27.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Persil Líquido De 800 ml', 27.00, 'persil liquido.png', 'Alta tecnología alemana líquida que remueve manchas difíciles cuidando las fibras de tus prendas.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 6. Detergente Roma Liquido -->
+        <div class="tarjeta">
+            <img src="roma liquido.png" alt="detergente roma liquido">
+            <div class="contenido">
+                <h3>Detergente Roma Liquido de 500 ml</h3>
+                <p>La tradición y efectividad multiusos del polvo Roma, ahora en una práctica versión líquida.</p>
+                <span class="precio">$18.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Roma Liquido de 500 ml', 18.00, 'roma liquido.png', 'La tradición y efectividad multiusos del polvo Roma, ahora en una práctica versión líquida.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 7. Detergente 123 Líquido -->
+        <div class="tarjeta">
+            <img src="1 2 3 liquido.png" alt="detergente 1 2 3 liquido">
+            <div class="contenido">
+                <h3>Detergente 123 Líquido De 2 L</h3>
+                <p>Rendimiento inteligente para toda tu ropa con un aroma fresco que dura por mucho más tiempo.</p>
+                <span class="precio">$55.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente 123 Líquido De 2 L', 55.00, '1 2 3 liquido.png', 'Rendimiento inteligente para toda tu ropa con un aroma fresco que dura por mucho más tiempo.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 8. Detergente Ariel Líquido -->
+        <div class="tarjeta">
+            <img src="Ariel liquido.png" alt="detergente ariel liquido">
+            <div class="contenido">
+                <h3>Detergente Ariel Líquido De 800 ml</h3>
+                <p>Impecable remoción de manchas desde la primera lavada sin dejar residuos en tus prendas.</p>
+                <span class="precio">$30.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Ariel Líquido De 800 ml', 30.00, 'Ariel liquido.png', 'Impecable remoción de manchas desde la primera lavada sin dejar residuos en tus prendas.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 9. Detergente Viva -->
+        <div class="tarjeta">
+            <img src="Viva.png" alt="detergente viva">
+            <div class="contenido">
+                <h3>Detergente Viva De 850 G</h3>
+                <p>Poderoso desbloqueador de mugre que realza los colores y blancos de tu ropa familiar.</p>
+                <span class="precio">$37.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Viva De 850 G', 37.00, 'Viva.png', 'Poderoso desbloqueador de mugre que realza los colores y blancos de tu ropa familiar.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 10. Detergente 123 De 500 G -->
+        <div class="tarjeta">
+            <img src="1 2 3 De 500 G.png" alt="detergente 1 2 3 liquido">
+            <div class="contenido">
+                <h3>Detergente 123 De 500 G</h3>
+                <p>Presentación ideal y económica en polvo para limpiezas rápidas en el hogar y ropa blanca.</p>
+                <span class="precio">$19.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente 123 De 500 G', 19.00, '1 2 3 De 500 G.png', 'Presentación ideal y económica en polvo para limpiezas rápidas en el hogar y ropa blanca.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 11. Detergente Ace De 3 K -->
+        <div class="tarjeta">
+            <img src="Ace de 3 K.png" alt="detergente ace de 3 kilos">
+            <div class="contenido">
+                <h3>Detergente Ace De 3 K</h3>
+                <p>Gran formato familiar para una blancura brillante y una limpieza profunda en cada carga.</p>
+                <span class="precio">$96.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Ace De 3 K', 96.00, 'Ace de 3 K.png', 'Gran formato familiar para una blancura brillante y una limpieza profunda en cada carga.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 12. Detergente 123 De 900 G -->
+        <div class="tarjeta">
+            <img src="123 De 900 G.png" alt="detergente 123 de 900 g">
+            <div class="contenido">
+                <h3>Detergente 123 De 900 G</h3>
+                <p>Fórmula multiusos en polvo perfecta para trastes, pisos y el cuidado diario de la ropa.</p>
+                <span class="precio">$37.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente 123 De 900 G', 37.00, '123 De 900 G.png', 'Fórmula multiusos en polvo perfecta para trastes, pisos y el cuidado diario de la ropa.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 13. Detergente Util De 500 G -->
+        <div class="tarjeta">
+            <img src="Util.png" alt="detergente util de 500 g">
+            <div class="contenido">
+                <h3>Detergente Util De 500 G</h3>
+                <p>Socio ideal para arrancar de raíz la grasa pesada y la suciedad en superficies de cocina.</p>
+                <span class="precio">$16.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Util De 500 G', 16.00, 'Util.png', 'Socio ideal para arrancar de raíz la grasa pesada y la suciedad en superficies de cocina.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 14. Detergente Ace De 5.5 K -->
+        <div class="tarjeta">
+            <img src="Ace de 5.5 K.png" alt="detergente ace de 5.5 kilos">
+            <div class="contenido">
+                <h3>Detergente Ace De 5.5 K</h3>
+                <p>Máximo ahorro y rendimiento industrial para mantener la ropa impecable por meses.</p>
+                <span class="precio">$120.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Ace De 5.5 K', 120.00, 'Ace de 5.5 K.png', 'Máximo ahorro y rendimiento industrial para mantener la ropa impecable por meses.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 15. Detergente Dest De 2 K -->
+        <div class="tarjeta">
+            <img src="Dest de 2 K.png" alt="detergente dest de 2 kilos">
+            <div class="contenido">
+                <h3>Detergente Dest De 2 K</h3>
+                <p>Fórmula concentrada con gran poder de acción contra manchas difíciles en telas pesadas.</p>
+                <span class="precio">$75.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Dest De 2 K', 75.00, 'Dest de 2 K.png', 'Fórmula concentrada con gran poder de acción contra manchas difíciles en telas pesadas.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 16. Detergente Ariel De 2 K -->
+        <div class="tarjeta">
+            <img src="Ariel de 2 K.png" alt="detergente ariel de 2 kilos">
+            <div class="contenido">
+                <h3>Detergente Ariel De 2 K</h3>
+                <p>Excelente penetración en fibras para sacar la suciedad guardada dejando un aroma inigualable.</p>
+                <span class="precio">$85.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Detergente Ariel De 2 K', 85.00, 'Ariel de 2 K.png', 'Excelente penetración en fibras para sacar la suciedad guardada dejando un aroma inigualable.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script de Guardado Dinámico para el Carrito -->
+    <script>
+        function agregarAlCarrito(nombre, precio, imagen, descripcion) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let productoExistente = carrito.find(item => item.nombre === nombre);
+
+            if (productoExistente) {
+                productoExistente.cantidad++;
+            } else {
+                carrito.push({ 
+                    nombre: nombre, 
+                    precio: precio, 
+                    imagen: imagen, 
+                    descripcion: descripcion, 
+                    cantidad: 1 
+                });
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            window.location.href = "carrito.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semillas</title>
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .contenedor-productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .tarjeta {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #c9d8be;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .tarjeta img {
+            width: 50%;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+        .contenido {
+            text-align: center;
+            padding: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .contenido h3 {
+            min-height: 40px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .contenido p {
+            font-size: 14px;
+            color: #555;
+            min-height: 60px;
+        }
+        .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .boton-carrito {
+            margin-top: auto;
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .boton-carrito:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body style="background-color: #27f5354f; margin: 0; padding: 20px; font-family: Arial, sans-serif;">
+    
+    <!-- Barra de Navegación -->
+    <nav style="padding: 20px; background-color: rgba(255,255,255,0.5); margin-bottom: 20px; display: flex; align-items: center; border-radius: 8px;">
+        <a href="Mi Pagina.html" title="Ir al Inicio" style="text-decoration: none;">
+            <i class="fas fa-home" style="font-size: 25px; color: black;"></i>
+        </a>
+    </nav>
+
+    <!-- Contenedor de Productos de Semillas -->
+    <div class="contenedor-productos">
+        
+        <!-- 1. Chícharo -->
+        <div class="tarjeta">
+            <img src="chícharro.png" alt="chícharo">
+            <div class="contenido">
+                <h3>Chícharo</h3>
+                <p>Chícharo de 1 Kg.</p>
+                <span class="precio">$19.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Chícharo', 19.00, 'chícharro.png', 'Chícharo de 1 Kg.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 2. Semillas de Girasol -->
+        <div class="tarjeta">
+            <img src="semillas de girasol.png" alt="semillas de girasol">
+            <div class="contenido">
+                <h3>Semillas de Girasol</h3>
+                <p>Semillas de girasol de 1 Kg.</p>
+                <span class="precio">$30.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Semillas de Girasol', 30.00, 'semillas de girasol.png', 'Semillas de girasol de 1 Kg.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 3. Alubia -->
+        <div class="tarjeta">
+            <img src="alubia.png" alt="alubia">
+            <div class="contenido">
+                <h3>Alubia</h3>
+                <p>Alubia de 1 Kg.</p>
+                <span class="precio">$29.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Alubia', 29.00, 'alubia.png', 'Alubia de 1 Kg.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 4. Maíz Negro -->
+        <div class="tarjeta">
+            <img src="maiz negro.png" alt="maiz negro">
+            <div class="contenido">
+                <h3>Maíz Negro</h3>
+                <p>Maíz negro de 50 Kg.</p>
+                <span class="precio">$480.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Maíz Negro', 480.00, 'maiz negro.png', 'Maíz negro de 50 Kg.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 5. Maíz Blanco -->
+        <div class="tarjeta">
+            <img src="maiz blanco.png" alt="Maiz Blanco">
+            <div class="contenido">
+                <h3>Maiz Blanco</h3>
+                <p>Maiz blanco de 50 Kg.</p>
+                <span class="precio">$420.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Maiz Blanco', 420.00, 'maiz blanco.png', 'Maiz blanco de 50 Kg.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 6. Maíz Amarillo -->
+        <div class="tarjeta">
+            <img src="maiz amarillo.png" alt="Maiz Amarillo">
+            <div class="contenido">
+                <h3>Maiz Amarillo</h3>
+                <p>Maiz amarillo de 50 Kg.</p>
+                <span class="precio">$450.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Maiz Amarillo', 450.00, 'maiz amarillo.png', 'Maiz amarillo de 50 Kg.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 7. Frijol Negro -->
+        <div class="tarjeta">
+            <img src="frijol negro.png" alt="Frijol Negro">
+            <div class="contenido">
+                <h3>Frijol Negro</h3>
+                <p>Frijol negro de 1 Kg.</p>
+                <span class="precio">$35.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Frijol Negro', 35.00, 'frijol negro.png', 'Frijol negro de 1 Kg.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 8. Frijol Rojo -->
+        <div class="tarjeta">
+            <img src="frijol rojo.png" alt="Frijol Rojo">
+            <div class="contenido">
+                <h3>Frijol Rojo</h3>
+                <p>Frijol rojo de 1 Kg.</p>
+                <span class="precio">$38.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Frijol Rojo', 38.00, 'frijol rojo.png', 'Frijol rojo de 1 Kg.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script de Guardado Dinámico para el Carrito -->
+    <script>
+        function agregarAlCarrito(nombre, precio, imagen, descripcion) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let productoExistente = carrito.find(item => item.nombre === nombre);
+
+            if (productoExistente) {
+                productoExistente.cantidad++;
+            } else {
+                carrito.push({ 
+                    nombre: nombre, 
+                    precio: precio, 
+                    imagen: imagen, 
+                    descripcion: descripcion, 
+                    cantidad: 1 
+                });
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            window.location.href = "carrito.html";
+        }
+    </script>
+</body>
+</html>

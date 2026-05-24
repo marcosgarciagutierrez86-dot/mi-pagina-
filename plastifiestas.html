@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastifiestas</title>
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .contenedor-productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .tarjeta {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #c9d8be;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .tarjeta img {
+            width: 50%;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+        .contenido {
+            text-align: center;
+            padding: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .contenido h3 {
+            min-height: 40px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .contenido p {
+            font-size: 14px;
+            color: #555;
+            min-height: 60px;
+        }
+        .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .boton-carrito {
+            margin-top: auto;
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .boton-carrito:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body style="background-color: #27f5354f; margin: 0; padding: 20px; font-family: Arial, sans-serif;">
+    
+    <!-- Barra de Navegación -->
+    <nav style="padding: 20px; background-color: rgba(255,255,255,0.5); margin-bottom: 20px; display: flex; align-items: center; border-radius: 8px;">
+        <a href="Mi Pagina.html" title="Ir al Inicio" style="text-decoration: none;">
+            <i class="fas fa-home" style="font-size: 25px; color: black;"></i>
+        </a>
+    </nav>
+
+    <!-- Contenedor de Productos -->
+    <div class="contenedor-productos">
+        
+        <!-- 1. Vasos Desechables (12 unidades) -->
+        <div class="tarjeta"> 
+            <img src="vasos.png" alt="vasos desechables">
+            <div class="contenido">
+                <h3>Vasos Desechables</h3>
+                <p>Pak de vasos desechables de 12 unidades.</p>
+                <span class="precio">$10.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Vasos Desechables', 10.00, 'vasos.png', 'Pak de vasos desechables de 12 unidades.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 2. Vasos Desechables (50 unidades) -->
+        <div class="tarjeta"> 
+            <img src="vasos de 50 unidades.png" alt="vasos desechables">
+            <div class="contenido">
+                <h3>Vasos Desechables de 50 unidades</h3>
+                <p>Paquete grande de vasos desechables, excelente rendimiento para tus fiestas y eventos.</p>
+                <span class="precio">$43.88</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Vasos Desechables de 50 unidades', 43.88, 'vasos de 50 unidades.png', 'Paquete grande de vasos desechables, excelente rendimiento para tus fiestas y eventos.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 3. Vasos Desechables Café -->
+        <div class="tarjeta"> 
+            <img src="vasos de color café.png" alt="vasos desechables">
+            <div class="contenido">
+                <h3>Vasos Desechables de color cafe</h3>
+                <p>Vasos desechables de 25 unidades</p>
+                <span class="precio">$18.98</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Vasos Desechables de color cafe', 18.98, 'vasos de color café.png', 'Vasos desechables de 25 unidades')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 4. Vasos Desechables Elegantes -->
+        <div class="tarjeta"> 
+            <img src="vasos elegantes.png" alt="vasos desechables">
+            <div class="contenido">
+                <h3>Vasos Desechables Elegantes</h3>
+                <p>100 vasos elegantes desechables</p>
+                <span class="precio">$120.99</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Vasos Desechables Elegantes', 120.99, 'vasos elegantes.png', '100 vasos elegantes desechables')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 5. Platos Desechables (30 unidades) -->
+        <div class="tarjeta"> 
+            <img src="plato de 30 unidades.png" alt="vasos desechables">
+            <div class="contenido">
+                <h3>Platos Desechables</h3>
+                <p>Platos desechables de 30 unidades</p>
+                <span class="precio">$25.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Platos Desechables', 25.00, 'plato de 30 unidades.png', 'Platos desechables de 30 unidades')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 6. Vasos Color Rojo -->
+        <div class="tarjeta">
+            <img src="color rojo.png" alt="vasos de color rojo desechables">
+            <div class="contenido">
+                <h3>Vasos de Color Rojo</h3>
+                <p>Pak de vasos desechables de color rojo de 20 unidades.</p>
+                <span class="precio">$18.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Vasos de Color Rojo', 18.00, 'color rojo.png', 'Pak de vasos desechables de color rojo de 20 unidades.')">Agregar al carrito</button>
+            </div>
+        </div>
+        
+        <!-- 7. Platos Desechables (50 unidades) -->
+        <div class="tarjeta">
+            <img src="platos.jpg" alt="platos desechables">
+            <div class="contenido">
+                <h3>Platos Desechables</h3>
+                <p>Pak de platos desechables de 50 unidades.</p>
+                <span class="precio">$45.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Platos Desechables', 45.00, 'platos.jpg', 'Pak de platos desechables de 50 unidades.')">Agregar al carrito</button>
+            </div>
+        </div>
+        
+        <!-- 8. Platos y Vasos Desechables -->
+        <div class="tarjeta">
+            <img src="platos y vasos.png" alt="platos y vasos desechables">
+            <div class="contenido">
+                <h3>Platos y Vasos Desechables</h3>
+                <p>Pak de platos y vasos desechables de 12 unidades.</p>
+                <span class="precio">$22.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Platos y Vasos Desechables', 22.00, 'platos y vasos.png', 'Pak de platos y vasos desechables de 12 unidades.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script de Guardado Dinámico para el Carrito -->
+    <script>
+        function agregarAlCarrito(nombre, precio, imagen, descripcion) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let productoExistente = carrito.find(item => item.nombre === nombre);
+
+            if (productoExistente) {
+                productoExistente.cantidad++;
+            } else {
+                carrito.push({ 
+                    nombre: nombre, 
+                    precio: precio, 
+                    imagen: imagen, 
+                    descripcion: descripcion, 
+                    cantidad: 1 
+                });
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            window.location.href = "carrito.html";
+        }
+    </script>
+</body>
+</html>

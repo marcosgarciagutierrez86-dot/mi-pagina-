@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lácteos</title>
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .contenedor-productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .tarjeta {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #c9d8be;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .tarjeta img {
+            width: 50%;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+        .contenido {
+            text-align: center;
+            padding: 10px;
+        }
+        .contenido h3 {
+            min-height: 40px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .contenido p {
+            font-size: 14px;
+            color: #555;
+            min-height: 60px;
+        }
+        .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .boton-carrito {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .boton-carrito:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body style="background-color: #27f5354f; margin: 0; padding: 20px; font-family: Arial, sans-serif;">
+    
+    <!-- Barra de Navegación -->
+    <nav style="padding: 20px; background-color: rgba(255,255,255,0.5); margin-bottom: 20px; display: flex; align-items: center; border-radius: 8px;">
+        <a href="Mi Pagina.html" title="Ir al Inicio" style="text-decoration: none;">
+            <i class="fas fa-home" style="font-size: 25px; color: black;"></i>
+        </a>
+    </nav>
+
+    <!-- Contenedor de las 16 Tarjetas -->
+    <div class="contenedor-productos">
+        
+        <!-- 1. Leche Alpura -->
+        <div class="tarjeta">
+            <img src="leche alpura.png" alt="leche alpura">
+            <div class="contenido">
+                <h3>Leche Alpura</h3>
+                <p>Disfruta de nuestra leche Alpura, ideal para tu familia con su sabor rico y nutritivo.</p>
+                <span class="precio">$37.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Leche Alpura', 37.00, 'leche alpura.png', 'Disfruta de nuestra leche Alpura, ideal para tu familia con su sabor rico y nutritivo.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 2. Yoghurt -->
+        <div class="tarjeta">
+            <img src="yoghurt.png" alt="yoghurt">
+            <div class="contenido">
+                <h3>Yoghurt</h3>
+                <p>Disfruta de nuestro yoghurt natural cremoso, perfecto para cualquier hora del día.</p>
+                <span class="precio">$32.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Yoghurt', 32.00, 'yoghurt.png', 'Disfruta de nuestro yoghurt natural cremoso, perfecto para cualquier hora del día.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 3. Yoghurt Bebible -->
+        <div class="tarjeta">
+            <img src="yoghurt bebible.png" alt="yoghurt bebible">
+            <div class="contenido">
+                <h3>Yoghurt Bebible</h3>
+                <p>Disfruta de nuestro yoghurt bebible, con su sabor único, refrescante y nutritivo.</p>
+                <span class="precio">$12.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Yoghurt Bebible', 12.00, 'yoghurt bebible.png', 'Disfruta de nuestro yoghurt bebible, con su sabor único, refrescante y nutritivo.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 4. Yoghurt Alpura -->
+        <div class="tarjeta">
+            <img src="yoghurt alpura.png" alt="yoghurt alpura">
+            <div class="contenido">
+                <h3>Yoghurt Alpura</h3>
+                <p>Lleva tu alpura para que lo disfrutes y compartas la máxima cremosidad.</p>
+                <span class="precio">$14.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Yoghurt Alpura', 14.00, 'yoghurt alpura.png', 'Lleva tu alpura para que lo disfrutes y compartas la máxima cremosidad.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 5. Nan 1 -->
+        <div class="tarjeta">
+            <img src="nan 1.png" alt="nan 1">
+            <div class="contenido">
+                <h3>Nan 1</h3>
+                <p>Fórmula láctea de inicio ideal para la nutrición y el desarrollo óptimo de tu bebé.</p>
+                <span class="precio">$90.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nan 1', 90.00, 'nan 1.png', 'Fórmula láctea de inicio ideal para la nutrición y el desarrollo óptimo de tu bebé.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 6. Nan 2 -->
+        <div class="tarjeta">
+            <img src="nan 2.png" alt="Nan 2">
+            <div class="contenido">
+                <h3>Nan 2</h3>
+                <p>Fórmula de continuación balanceada para el seguimiento del crecimiento de tu pequeño.</p>
+                <span class="precio">$95.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nan 2', 95.00, 'nan 2.png', 'Fórmula de continuación balanceada para el seguimiento del crecimiento de tu pequeño.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 7. Nan 3 -->
+        <div class="tarjeta">
+            <img src="nan 3.png" alt="Nan 3">
+            <div class="contenido">
+                <h3>Nan 3</h3>
+                <p>Alimento lácteo en polvo desarrollado para niños en su etapa de crecimiento activo.</p>
+                <span class="precio">$105.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nan 3', 105.00, 'nan 3.png', 'Alimento lácteo en polvo desarrollado para niños en su etapa de crecimiento activo.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 8. Nido De 1800 G -->
+        <div class="tarjeta">
+            <img src="Nido De 1800 G.png" alt="Nido De 1800 G">
+            <div class="contenido">
+                <h3>Nido De 1800 G</h3>
+                <p>Leche entera en polvo ideal para proteger el sistema inmune de toda la familia.</p>
+                <span class="precio">$120.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nido De 1800 G', 120.00, 'Nido De 1800 G.png', 'Leche entera en polvo ideal para proteger el sistema inmune de toda la familia.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 9. Nido de 1500 G -->
+        <div class="tarjeta">
+            <img src="Nido de 1500 G.png" alt="Nido de 1500 G">
+            <div class="contenido">
+                <h3>Nido De 1500 G</h3>
+                <p>Gran rendimiento y nutrición fortificada para el desayuno diario de los niños.</p>
+                <span class="precio">$110.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nido De 1500 G', 110.00, 'Nido de 1500 G.png', 'Gran rendimiento y nutrición fortificada para el desayuno diario de los niños.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 10. Nido de 1600 G -->
+        <div class="tarjeta">
+            <img src="nido de 1600 G.png" alt="Nido de 1600 G">
+            <div class="contenido">
+                <h3>Nido De 1600 G</h3>
+                <p>Presentación ideal con vitaminas y minerales esenciales para un sano desarrollo.</p>
+                <span class="precio">$115.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nido De 1600 G', 115.00, 'nido de 1600 G.png', 'Presentación ideal con vitaminas y minerales esenciales para un sano desarrollo.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 11. Nido De 1350 G -->
+        <div class="tarjeta">
+            <img src="nido de 1350 g.jpg" alt="Nido de 1350 G">
+            <div class="contenido">
+                <h3>Nido De 1350 G</h3>
+                <p>Excelente opción para tener siempre en la despensa una alternativa láctea saludable.</p>
+                <span class="precio">$105.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nido De 1350 G', 105.00, 'nido de 1350 g.jpg', 'Excelente opción para tener siempre en la despensa una alternativa láctea saludable.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 12. Nan Comfor -->
+        <div class="tarjeta">
+            <img src="nan comfor.png" alt="Nan Comfor">
+            <div class="contenido">
+                <h3>Nan Comfor</h3>
+                <p>Fórmula especial diseñada para el bienestar digestivo y alivio de molestias estomacales.</p>
+                <span class="precio">$95.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nan Comfor', 95.00, 'nan comfor.png', 'Fórmula especial diseñada para el bienestar digestivo y alivio de molestias estomacales.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 13. Nan Supremepro -->
+        <div class="tarjeta">
+            <img src="nan supremepro.png" alt="Nan Supremepro">
+            <div class="contenido">
+                <h3>Nan Supremepro</h3>
+                <p>Nuestra fórmula más avanzada con ingredientes de alta calidad para el óptimo desarrollo.</p>
+                <span class="precio">$125.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nan Supremepro', 125.00, 'nan supremepro.png', 'Nuestra fórmula más avanzada con ingredientes de alta calidad para el óptimo desarrollo.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 14. Nan OptimalPro -->
+        <div class="tarjeta">
+            <img src="nan optimalpro.png" alt="Nan OptimalPro">
+            <div class="contenido">
+                <h3>Nan OptimalPro</h3>
+                <p>Protección nutricional balanceada que apoya activamente al sistema inmunológico.</p>
+                <span class="precio">$100.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nan OptimalPro', 100.00, 'nan optimalpro.png', 'Protección nutricional balanceada que apoya activamente al sistema inmunológico.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 15. Nan OptiPro -->
+        <div class="tarjeta">
+            <img src="nan optipro.png" alt="Nan OptiPro">
+            <div class="contenido">
+                <h3>Nan OptiPro</h3>
+                <p>Fórmula de confianza que aporta las proteínas óptimas que tu pequeño necesita.</p>
+                <span class="precio">$95.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nan OptiPro', 95.00, 'nan optipro.png', 'Fórmula de confianza que aporta las proteínas óptimas que tu pequeño necesita.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 16. Nan Sin Lactosa -->
+        <div class="tarjeta">
+            <img src="nan sin lactosa.png" alt="Nan Sin Lactosa">
+            <div class="contenido">
+                <h3>Nan Sin Lactosa</h3>
+                <p>Fórmula especial para lactantes con intolerancia o sensibilidad a la lactosa.</p>
+                <span class="precio">$113.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Nan Sin Lactosa', 113.00, 'nan sin lactosa.png', 'Fórmula especial para lactantes con intolerancia o sensibilidad a la lactosa.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script de Guardado Dinámico para el Carrito -->
+    <script>
+        function agregarAlCarrito(nombre, precio, imagen, descripcion) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let productoExistente = carrito.find(item => item.nombre === nombre);
+
+            if (productoExistente) {
+                productoExistente.cantidad++;
+            } else {
+                carrito.push({ 
+                    nombre: nombre, 
+                    precio: precio, 
+                    imagen: imagen, 
+                    descripcion: descripcion, 
+                    cantidad: 1 
+                });
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            window.location.href = "carrito.html";
+        }
+    </script>
+</body>
+</html>
