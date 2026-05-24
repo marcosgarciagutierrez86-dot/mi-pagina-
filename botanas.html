@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botanas</title>
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .contenedor-productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .tarjeta {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #c9d8be;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .tarjeta img {
+            width: 50%;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+        .contenido {
+            text-align: center;
+            padding: 10px;
+        }
+        .contenido h3 {
+            min-height: 40px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .contenido p {
+            font-size: 14px;
+            color: #555;
+            min-height: 60px;
+        }
+        .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .boton-carrito {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .boton-carrito:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body style="background-color: #27f5354f; margin: 0; padding: 20px; font-family: Arial, sans-serif;">
+    
+    <nav style="padding: 20px; background-color: rgba(255,255,255,0.5); margin-bottom: 20px; display: flex; align-items: center; border-radius: 8px;">
+        <a href="Mi Pagina.html" title="Ir al Inicio" style="text-decoration: none;">
+            <i class="fas fa-home" style="font-size: 25px; color: black;"></i>
+        </a>
+    </nav>
+
+    <div class="contenedor-productos">
+        
+        <!-- 1. Sabritones -->
+        <div class="tarjeta">
+            <img src="sabrita.jpg" alt="Sabritones">
+            <div class="contenido">
+                <h3>Sabritones</h3>
+                <p>Disfruta de nuestros sabritones, crujientes y llenos de sabor, perfectos para compartir en cualquier ocasión.</p>
+                <span class="precio">$20.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Sabritones', 20.00, 'sabrita.jpg', 'Disfruta de nuestros sabritones, crujientes y llenos de sabor, perfectos para compartir en cualquier ocasión.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 2. Pake Taxo -->
+        <div class="tarjeta">
+            <img src="pake taxo.jpg" alt="Pake Taxo">
+            <div class="contenido">
+                <h3>Pake Taxo</h3>
+                <p>Prueba nuestro Pake Taxo, una deliciosa mezcla de sabores que te sorprenderá con cada bocado.</p>
+                <span class="precio">$30.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Pake Taxo', 30.00, 'pake taxo.jpg', 'Prueba nuestro Pake Taxo, una deliciosa mezcla de sabores que te sorprenderá con cada bocado.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 3. Cheetos -->
+        <div class="tarjeta">
+            <img src="cheetos.jpg" alt="Cheetos">
+            <div class="contenido">
+                <h3>Cheetos</h3>
+                <p>Los Cheetos son el snack perfecto para los amantes de lo picante, con su sabor intenso y crujiente textura.</p>
+                <span class="precio">$18.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Cheetos', 18.00, 'cheetos.jpg', 'Los Cheetos son el snack perfecto para los amantes de lo picante, con su sabor intenso y crujiente textura.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 4. Sabritas -->
+        <div class="tarjeta">
+            <img src="sabritas.jpg" alt="Sabritas">
+            <div class="contenido">
+                <h3>Sabritas</h3>
+                <p>Las Sabritas son el acompañante ideal para tus momentos de diversión, con su sabor único y crujiente textura.</p>
+                <span class="precio">$27.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Sabritas', 27.00, 'sabritas.jpg', 'Las Sabritas son el acompañante ideal para tus momentos de diversión, con su sabor único y crujiente textura.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 5. Doritos Nachos -->
+        <div class="tarjeta">
+            <img src="doritos.png" alt="Doritos Nachos">
+            <div class="contenido">
+                <h3>Doritos Nachos</h3>
+                <p>Disfruta de los Doritos Nachos, una deliciosa combinación de sabor y disfruta el momento con doritos.</p>
+                <span class="precio">$23.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Doritos Nachos', 23.00, 'doritos.png', 'Disfruta de los Doritos Nachos, una deliciosa combinación de sabor y disfruta el momento con doritos.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 6. Doritos Cool Original -->
+        <div class="tarjeta">
+            <img src="doritos cool original.png" alt="Doritos Cool Original">
+            <div class="contenido">
+                <h3>Doritos Cool Original</h3>
+                <p>El increíble toque y frescura del sabor Cool Original que ya conoces.</p>
+                <span class="precio">$24.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Doritos Cool Original', 24.00, 'doritos cool original.png', 'El increíble toque y frescura del sabor Cool Original que ya conoces.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 7. Doritos Tangy Cheese -->
+        <div class="tarjeta">
+            <img src="doritos tangy cheese.png" alt="Doritos Tangy Cheese">
+            <div class="contenido">
+                <h3>Doritos Tangy Cheese</h3>
+                <p>Un estallido de queso intenso y crujiente en cada bocado.</p>
+                <span class="precio">$26.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Doritos Tangy Cheese', 26.00, 'doritos tangy cheese.png', 'Un estallido de queso intenso y crujiente en cada bocado.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 8. Takis Fuego -->
+        <div class="tarjeta">
+            <img src="takis.jpg" alt="Takis Fuego">
+            <div class="contenido">
+                <h3>Takis Fuego</h3>
+                <p>Llevate tu takis fuego y disfruta de su sabor intenso y crujiente textura.</p>
+                <span class="precio">$20.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Takis Fuego', 20.00, 'takis.jpg', 'Llevate tu takis fuego y disfruta de su sabor intenso y crujiente textura.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 9. Papas Original -->
+        <div class="tarjeta">
+            <img src="papas original.png" alt="Papas Original">
+            <div class="contenido">
+                <h3>Papas Original</h3>
+                <p>Las clásicas papas de siempre, perfectamente saladas y crujientes.</p>
+                <span class="precio">$27.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Papas Original', 27.00, 'papas original.png', 'Las clásicas papas de siempre, perfectamente saladas y crujientes.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 10. Ruffles Max -->
+        <div class="tarjeta">
+            <img src="ruffles max.png" alt="Ruffles Max">
+            <div class="contenido">
+                <h3>Ruffles Max</h3>
+                <p>Máxima textura con ondas más grandes para un crujido inigualable.</p>
+                <span class="precio">$48.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Ruffles Max', 48.00, 'ruffles max.png', 'Máxima textura con ondas más grandes para un crujido inigualable.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 11. Sabritas Sabor Jalapeño -->
+        <div class="tarjeta">
+            <img src="jalapeño.png" alt="Sabritas Sabor Jalapeño">
+            <div class="contenido">
+                <h3>Sabritas Sabor Jalapeño</h3>
+                <p>El balance perfecto entre la papa tradicional y el picor del jalapeño.</p>
+                <span class="precio">$24.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Sabritas Sabor Jalapeño', 24.00, 'jalapeño.png', 'El balance perfecto entre la papa tradicional y el picor del jalapeño.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 12. Sabritas Sabor Habanero -->
+        <div class="tarjeta">
+            <img src="abanero.png" alt="Sabritas Sabor Habanero">
+            <div class="contenido">
+                <h3>Sabritas Sabor Habanero</h3>
+                <p>Para los verdaderos valientes amantes del picante extremo.</p>
+                <span class="precio">$25.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Sabritas Sabor Habanero', 25.00, 'abanero.png', 'Para los verdaderos valientes amantes del picante extremo.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 13. Ruffles Mega Crunch -->
+        <div class="tarjeta">
+            <img src="rufles mega crunch.png" alt="Ruffles Mega Crunch">
+            <div class="contenido">
+                <h3>Ruffles Mega Crunch</h3>
+                <p>Una textura extra crujiente que llevará tu experiencia al límite.</p>
+                <span class="precio">$27.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Ruffles Mega Crunch', 27.00, 'rufles mega crunch.png', 'Una textura extra crujiente que llevará tu experiencia al límite.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 14. Sabritas Sabor Limón -->
+        <div class="tarjeta">
+            <img src="sabor limon.png" alt="Sabritas Sabor Limón">
+            <div class="contenido">
+                <h3>Sabritas Sabor Limón</h3>
+                <p>La combinación acidita que a todos nos encanta en cualquier reunión.</p>
+                <span class="precio">$24.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Sabritas Sabor Limón', 24.00, 'sabor limon.png', 'La combinación acidita que a todos nos encanta en cualquier reunión.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 15. Sabritas Sabor Blazin Cheeze -->
+        <div class="tarjeta">
+            <img src="blazin cheeze.png" alt="Sabritas Sabor Blazin Cheeze">
+            <div class="contenido">
+                <h3>Sabritas Sabor Blazin Cheeze</h3>
+                <p>Sabor a queso intensamente picoso y adictivo.</p>
+                <span class="precio">$24.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Sabritas Sabor Blazin Cheeze', 24.00, 'blazin cheeze.png', 'Sabor a queso intensamente picoso y adictivo.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 16. Sabritas Sabor Adobadas -->
+        <div class="tarjeta">
+            <img src="adobadas.png" alt="Sabritas Sabor Adobadas">
+            <div class="contenido">
+                <h3>Sabritas Sabor Adobadas</h3>
+                <p>El toque sazonado y ligeramente dulce de las papas adobadas tradicionales.</p>
+                <span class="precio">$25.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Sabritas Sabor Adobadas', 25.00, 'adobadas.png', 'El toque sazonado y ligeramente dulce de las papas adobadas tradicionales.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function agregarAlCarrito(nombre, precio, imagen, descripcion) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let productoExistente = carrito.find(item => item.nombre === nombre);
+
+            if (productoExistente) {
+                productoExistente.cantidad++;
+            } else {
+                carrito.push({ 
+                    nombre: nombre, 
+                    precio: precio, 
+                    imagen: imagen, 
+                    descripcion: descripcion, 
+                    cantidad: 1 
+                });
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            window.location.href = "carrito.html";
+        }
+    </script>
+</body>
+</html>

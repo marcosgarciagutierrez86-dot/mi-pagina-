@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas</title>
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .contenedor-productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .tarjeta {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #c9d8be; /* Tono verde idéntico al de Botanas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .tarjeta img {
+            width: 50%;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+        .contenido {
+            text-align: center;
+            padding: 10px;
+        }
+        .contenido h3 {
+            min-height: 40px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .contenido p {
+            font-size: 14px;
+            color: #555;
+            min-height: 60px;
+        }
+        .precio {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .boton-carrito {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .boton-carrito:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body style="background-color: #27f5354f; margin: 0; padding: 20px; font-family: Arial, sans-serif;">
+    
+    <!-- Barra de Navegación -->
+    <nav style="padding: 20px; background-color: rgba(255,255,255,0.5); margin-bottom: 20px; display: flex; align-items: center; border-radius: 8px;">
+        <a href="Mi Pagina.html" title="Ir al Inicio" style="text-decoration: none;">
+            <i class="fas fa-home" style="font-size: 25px; color: black;"></i>
+        </a>
+    </nav>
+
+    <!-- Contenedor de Productos -->
+    <div class="contenedor-productos">
+        
+        <!-- 1. Bebida Coca Cola -->
+        <div class="tarjeta">
+            <img src="coca cola.jpg" alt="bebida coca cola de 600 ml">
+            <div class="contenido">
+                <h3>Bebida Coca Cola</h3>
+                <p>Disfruta de nuestra bebida Coca Cola, ideal para refrescarte en cualquier momento.</p>
+                <span class="precio">$25.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Bebida Coca Cola', 25.00, 'coca cola.jpg', 'Disfruta de nuestra bebida Coca Cola, ideal para refrescarte en cualquier momento.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 2. Bebida Pepsi -->
+        <div class="tarjeta">
+            <img src="pepsi.jpg" alt="bebida pepsi de 600 ml">
+            <div class="contenido">
+                <h3>Bebida Pepsi</h3>
+                <p>Vive el momento con pepsi.</p>
+                <span class="precio">$22.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Bebida Pepsi', 22.00, 'pepsi.jpg', 'Vive el momento con pepsi.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 3. Bebida Sprite -->
+        <div class="tarjeta">
+            <img src="sprite.jpg" alt="bebida sprite de 600 ml">
+            <div class="contenido">
+                <h3>Bebida Sprite</h3>
+                <p>Vino y Sprite para que pegue rapido.</p>
+                <span class="precio">$23.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Bebida Sprite', 23.00, 'sprite.jpg', 'Vino y Sprite para que pegue rapido.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 4. Bebida Fresca -->
+        <div class="tarjeta">
+            <img src="fresca.jpg" alt="bebida fresca de 600 ml">
+            <div class="contenido">
+                <h3>Bebida Fresca</h3>
+                <p>Tomar el fresco es tomandose una Fresca.</p>
+                <span class="precio">$21.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Bebida Fresca', 21.00, 'fresca.jpg', 'Tomar el fresco es tomandose una Fresca.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 5. Coca-Cola En Lata -->
+        <div class="tarjeta">
+            <img src="coca-cola en lata.png" alt="bebida coca cola de 335 ml">
+            <div class="contenido">
+                <h3>Coca-Cola En Lata</h3>
+                <p>Disfruta del sabor original y refrescante de Coca-Cola en su práctica presentación en lata.</p>
+                <span class="precio">$21.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Coca-Cola En Lata', 21.00, 'coca-cola en lata.png', 'Disfruta del sabor original y refrescante de Coca-Cola en su práctica presentación en lata.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 6. Pepsi En Lata -->
+        <div class="tarjeta">
+            <img src="pepsi lata.png" alt="bebida pepsi de 335 ml">
+            <div class="contenido">
+                <h3>Pepsi En Lata</h3>
+                <p>Refrescante y clásico sabor burbujeante, ideal para disfrutar bien fría en cualquier lugar.</p>
+                <span class="precio">$17.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Pepsi En Lata', 17.00, 'pepsi lata.png', 'Refrescante y clásico sabor burbujeante, ideal para disfrutar bien fría en cualquier lugar.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 7. Fanta En Lata -->
+        <div class="tarjeta">
+            <img src="fanta lata.png" alt="bebida fanta de 335 ml">
+            <div class="contenido">
+                <h3>Fanta En Lata</h3>
+                <p>Todo el divertido sabor frutal a naranja con la chispa burbujeante que te encanta.</p>
+                <span class="precio">$15.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Fanta En Lata', 15.00, 'fanta lata.png', 'Todo el divertido sabor frutal a naranja con la chispa burbujeante que te encanta.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 8. Fanta -->
+        <div class="tarjeta">
+            <img src="fanta.png" alt="bebida fanta de 600 ml">
+            <div class="contenido">
+                <h3>Fanta</h3>
+                <p>Disfruta del increíble y refrescante sabor de Fanta sabor naranja de 600 ml.</p>
+                <span class="precio">$19.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Fanta', 19.00, 'fanta.png', 'Disfruta del increíble y refrescante sabor de Fanta sabor naranja de 600 ml.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 9. Mirinda De 3 L -->
+        <div class="tarjeta">
+            <img src="Mirinda de 3 L.png" alt="mirinda de 3 litros">
+            <div class="contenido">
+                <h3>Mirinda De 3 L</h3>
+                <p>El delicioso sabor a naranja en su tamaño gigante para compartir con toda la familia.</p>
+                <span class="precio">$45.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Mirinda De 3 L', 45.00, 'Mirinda de 3 L.png', 'El delicioso sabor a naranja en su tamaño gigante para compartir con toda la familia.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 10. Sprite De 3 L -->
+        <div class="tarjeta">
+            <img src="Sprite de 3 L.png" alt="sprite de 3 litros">
+            <div class="contenido">
+                <h3>Sprite De 3 L</h3>
+                <p>Refrescante sabor lima-limón en presentación familiar perfecta para acompañar tus comidas.</p>
+                <span class="precio">$45.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Sprite De 3 L', 45.00, 'Sprite de 3 L.png', 'Refrescante sabor lima-limón en presentación familiar perfecta para acompañar tus comidas.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 11. Manzanita Sol De 3 L -->
+        <div class="tarjeta">
+            <img src="manzanita sol de 3 L.png" alt="manzanita sol de 3 litros">
+            <div class="contenido">
+                <h3>Manzanita Sol De 3 L</h3>
+                <p>Disfruta del clásico y delicioso sabor a manzana en un tamaño ideal para tus fiestas.</p>
+                <span class="precio">$41.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Manzanita Sol De 3 L', 41.00, 'manzanita sol de 3 L.png', 'Disfruta del clásico y delicioso sabor a manzana en un tamaño ideal para tus fiestas.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 12. Coca-Cola De 3 L -->
+        <div class="tarjeta">
+            <img src="coca-cola de 3 L.png" alt="coca cola de 3 litros">
+            <div class="contenido">
+                <h3>Coca-Cola De 3 L</h3>
+                <p>El sabor original de siempre en la botella más grande, ideal para que rinda para todos.</p>
+                <span class="precio">$50.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Coca-Cola De 3 L', 50.00, 'coca-cola de 3 L.png', 'El sabor original de siempre en la botella más grande, ideal para que rinda para todos.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 13. Pepsi De 3 L -->
+        <div class="tarjeta">
+            <img src="Pepsi de 3 L.png" alt="pepsi de 3 litros">
+            <div class="contenido">
+                <h3>Pepsi De 3 L</h3>
+                <p>Disfruta al máximo con la presentación gigante de Pepsi para refrescar todos tus momentos.</p>
+                <span class="precio">$40.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Pepsi De 3 L', 40.00, 'Pepsi de 3 L.png', 'Disfruta al máximo con la presentación gigante de Pepsi para refrescar todos tus momentos.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 14. Fanta De 3 L -->
+        <div class="tarjeta">
+            <img src="Fanta de 3 L.png" alt="fanta de 3 litros">
+            <div class="contenido">
+                <h3>Fanta De 3 L</h3>
+                <p>Sabor frutal e intenso a naranja en tamaño familiar para llenar de diversión a todos.</p>
+                <span class="precio">$45.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Fanta De 3 L', 45.00, 'Fanta de 3 L.png', 'Sabor frutal e intenso a naranja en tamaño familiar para llenar de diversión a todos.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 15. 7UP De 3 L -->
+        <div class="tarjeta">
+            <img src="7up de 3 L.png" alt="7up de 3 litros">
+            <div class="contenido">
+                <h3>7UP De 3 L</h3>
+                <p>Bebida sabor lima-limón, limpia y refrescante en su empaque ideal para compartir.</p>
+                <span class="precio">$48.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('7UP De 3 L', 48.00, '7up de 3 L.png', 'Bebida sabor lima-limón, limpia y refrescante en su empaque ideal para compartir.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- 16. Fresca De 3 L -->
+        <div class="tarjeta">
+            <img src="Fresca de 3 L.png" alt="fresca de 3 litros">
+            <div class="contenido">
+                <h3>Fresca De 3 L</h3>
+                <p>El inigualable y refrescante sabor cítrico de la toronja en botella gigante familiar.</p>
+                <span class="precio">$45.00</span>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Fresca De 3 L', 45.00, 'Fresca de 3 L.png', 'El inigualable y refrescante sabor cítrico de la toronja en botella gigante familiar.')">Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script de almacenamiento local -->
+    <script>
+        function agregarAlCarrito(nombre, precio, imagen, descripcion) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let productoExistente = carrito.find(item => item.nombre === nombre);
+
+            if (productoExistente) {
+                productoExistente.cantidad++;
+            } else {
+                carrito.push({ 
+                    nombre: nombre, 
+                    precio: precio, 
+                    imagen: imagen, 
+                    descripcion: descripcion, 
+                    cantidad: 1 
+                });
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            window.location.href = "carrito.html";
+        }
+    </script>
+</body>
+</html>
